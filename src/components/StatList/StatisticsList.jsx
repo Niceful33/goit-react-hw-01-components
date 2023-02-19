@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { StatisticItem } from '../StatItem/StatisticItem';
 import { Title, Statistics, List } from '../StatList/StatisList.Styled';
-// import { StatisticsTitle } from './StatisticsTitle';
 
 export function StatisticsList({ stats, title }) {
   return (
