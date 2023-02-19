@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
-
+import { Item, Indicator } from '../FriendItem/FriendItem.Styled';
 export function FriendItem({ friend: { avatar, name, isOnline } }) {
-  //  let statusColor = online ? css.statusOn : css.statusOff;
   return (
-    <div>
-      <span className="status">{isOnline}</span>
-      {/* <span className={statusColor}>{online}</span> */}
+    <Item>
+      <Indicator isOnline={isOnline}></Indicator>
+
       <img src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
-    </div>
+      <p>{name}</p>
+    </Item>
   );
 }
 FriendItem.propTypes = {

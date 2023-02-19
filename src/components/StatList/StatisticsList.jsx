@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
-import { StatisticItem } from './StatisticItem';
+import { StatisticItem } from '../StatItem/StatisticItem';
+import { Title, Statistics, List } from '../StatList/StatisList.Styled';
 // import { StatisticsTitle } from './StatisticsTitle';
 
 export function StatisticsList({ stats, title }) {
   return (
-    <section>
-      <div>{title && <h2>Upload stats</h2>}</div>
+    <Statistics>
+      <div>{title && <Title>Upload stats</Title>}</div>
       {/* <StatisticsTitle title={title} /> */}
-      <ul>
+      <List>
         {stats.map(({ id, label, percentage }) => (
           <StatisticItem key={id} label={label} percentage={percentage} />
         ))}
-      </ul>
-    </section>
+      </List>
+    </Statistics>
   );
 }
 StatisticsList.propTypes = {

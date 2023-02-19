@@ -1,4 +1,13 @@
 import PropTypes from 'prop-types';
+import {
+  ProfileInfo,
+  Description,
+  Avatar,
+  Name,
+  Stats,
+  Item,
+  Info,
+} from './Profile.Styled';
 // import { BiAt } from 'react-icons/bi';
 
 export function Profile({
@@ -11,28 +20,28 @@ export function Profile({
   likes,
 }) {
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="User avatar" />
-        <p>{username}</p>
-        <p>{tag}</p>
-        <p>{location}</p>
-      </div>
-      <ul>
-        <li>
+    <ProfileInfo>
+      <Description>
+        <Avatar src={avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <Info>{tag}</Info>
+        <Info>{location}</Info>
+      </Description>
+      <Stats>
+        <Item>
           <span>Followers</span>
           <span>{followers}</span>
-        </li>
-        <li>
+        </Item>
+        <Item>
           <span>Views</span>
           <span>{views}</span>
-        </li>
-        <li>
+        </Item>
+        <Item>
           <span>Likes</span>
           <span>{likes}</span>
-        </li>
-      </ul>
-    </div>
+        </Item>
+      </Stats>
+    </ProfileInfo>
   );
 }
 Profile.propTypes = {

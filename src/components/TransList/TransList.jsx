@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
-import { TransEl } from './TransEl';
+import { TransEl } from '../TransEl/TransEl';
+import { Table, Th } from '../TransList/TransList.Styled';
 
 export function TransList({ items }) {
   //   console.log(items);
   return (
-    <table>
+    <Table>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <Th>Type</Th>
+          <Th>Amount</Th>
+          <Th>Currency</Th>
         </tr>
       </thead>
       <tbody>
@@ -17,7 +18,7 @@ export function TransList({ items }) {
           <TransEl key={id} type={type} amount={amount} currency={currency} />
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 }
 TransList.propTypes = {

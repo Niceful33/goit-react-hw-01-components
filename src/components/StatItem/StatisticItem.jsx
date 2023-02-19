@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import { Item, getRandomHexColor, Label } from '../StatItem/StatsItem.Styled';
 
 export function StatisticItem({ label, percentage }) {
   return (
-    <li>
-      <span>{label}</span>
-      <span>{percentage}%</span>
-    </li>
+    <Item style={{ backgroundColor: getRandomHexColor() }}>
+      <Label>{label}</Label>
+      <Label>{percentage}%</Label>
+    </Item>
   );
 }
 

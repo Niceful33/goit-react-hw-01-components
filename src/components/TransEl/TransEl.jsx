@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-
+import { Tr } from '../TransEl/TransEl.Styled';
 export function TransEl({ type, amount, currency }) {
   return (
-    <tr>
+    <Tr>
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
-    </tr>
+    </Tr>
   );
 }
 
